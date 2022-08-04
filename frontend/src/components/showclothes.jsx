@@ -76,13 +76,23 @@ export default function ShowClothes({ product }) {
                     }
                   >
                     <div
-                      className="bg-secondary mt-2 preview-img"
                       style={{
                         height: "20vw",
                         width: "17vw",
-                        backgroundImage: "url(" + item.link_img + ")",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }}
-                    ></div>
+                    >
+                      <img
+                        className="bg-secondary mt-2 preview-img"
+                        src={item.link_img}
+                        style={{
+                          height: "100%",
+                        }}
+                        alt="First slide"
+                      />
+                    </div>
                   </div>
                 );
               })}

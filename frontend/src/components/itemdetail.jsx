@@ -155,14 +155,20 @@ export default function ItemDetail() {
                             }
                           >
                             <div
-                              className="mt-2 preview-img"
                               style={{
-                                backgroundImage: "url(" + img.link_img + ")",
-                                backgroundPosition: "center",
-                                backgroundSize: "contain",
-                                backgroundRepeat: "no-repeat",
+                                height: "100%",
+                                width: "100%",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
                               }}
-                            ></div>
+                            >
+                              <img
+                                className="mt-2 preview-img"
+                                src={img.link_img}
+                                alt="First slide"
+                              />
+                            </div>
                           </div>
                         );
                       })}
