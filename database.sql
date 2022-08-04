@@ -3,11 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 28, 2022 lúc 11:38 AM
+-- Thời gian đã tạo: Th8 04, 2022 lúc 10:16 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 7.4.27
 
-SET SQL_MODE = "";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -189,10 +189,16 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `product_id`, `classify_id`, `qty`, `amount`, `transaction_id`, `status`) VALUES
-(8, 38, 69, 46, 1, '10000.0000', NULL, 'pending'),
-(7, 38, 71, 48, 1, '10000.0000', NULL, 'pending'),
-(9, 38, 70, 47, 2, '2.0000', NULL, 'pending'),
-(10, 38, 74, 54, 3, '3000000.0000', NULL, 'pending');
+(36, 30, 72, 49, 1, '100000.0000', 24, 'chờ xác nhận'),
+(41, 30, 72, 49, 1, '100000.0000', 28, 'chờ xác nhận'),
+(38, 30, 72, 49, 2, '200000.0000', 26, 'chờ xác nhận'),
+(39, 30, 72, 49, 1, '100000.0000', 27, 'chờ xác nhận'),
+(40, 30, 71, 48, 1, '10000.0000', 27, 'chờ xác nhận'),
+(42, 30, 71, 48, 1, '10000.0000', 28, 'chờ xác nhận'),
+(46, 38, 69, 46, 1, '10000.0000', 30, 'chờ xác nhận'),
+(45, 38, 71, 48, 1, '10000.0000', 30, 'chờ xác nhận'),
+(47, 38, 71, 48, 1, '10000.0000', NULL, 'pending'),
+(48, 38, 72, 49, 1, '100000.0000', NULL, 'pending');
 
 -- --------------------------------------------------------
 
@@ -217,19 +223,19 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`id`, `catalog_id`, `name`, `price`, `gender`, `discount`, `description`, `created`) VALUES
 (72, 47, 'Bạn gái akatsuki 4', '100000.0000', 'Male', NULL, '', '2022-07-20'),
-(71, 47, 'Bạn gái akatsuki 3', '10000.0000', 'Male', NULL, '', '2022-07-20'),
-(70, 47, 'bạn trai akatsuki', '1.0000', 'Female', NULL, '', '2022-07-20'),
-(69, 47, 'Bạn gái akatsuki 2', '10000.0000', 'Male', NULL, '', '2022-07-20'),
-(68, 47, 'Bạn gái akatsuki', '1000.0000', 'Male', NULL, '', '2022-07-20'),
-(67, 41, 'Áo akatsuki 4', '200.0000', 'Unisex', NULL, '', '2022-07-20'),
-(66, 41, 'Áo akatsuki 3', '0.0000', 'Unisex', NULL, '', '2022-07-20'),
-(65, 41, 'Áo akatsuki 2', '200.0000', 'Unisex', NULL, '', '2022-07-20'),
-(64, 41, 'Áo akatsuki 1', '200.0000', 'Unisex', NULL, '', '2022-07-20'),
-(63, 46, 'Ốp điện thoại m3', '100.0000', 'Unisex', NULL, '', '2022-07-20'),
-(62, 46, 'Ốp điện thoại m2', '100.0000', 'Unisex', NULL, '', '2022-07-20'),
-(61, 46, 'Ốp điện thoại m1', '100.0000', 'Unisex', NULL, '', '2022-07-20'),
-(60, 41, 'Áo Wibu', '12.0000', 'Male', NULL, 'Wibu never die', '2022-07-20'),
-(73, 47, 'Idol coslay', '10.0000', 'Male', NULL, 'No description!!!', '2022-07-21'),
+(71, 47, 'Bạn gái akatsuki 3', '100000.0000', 'Male', NULL, '', '2022-07-20'),
+(70, 47, 'bạn trai akatsuki', '100000.0000', 'Female', NULL, '', '2022-07-20'),
+(69, 47, 'Bạn gái akatsuki 2', '100000.0000', 'Male', NULL, '', '2022-07-20'),
+(68, 47, 'Bạn gái akatsuki', '100000.0000', 'Male', NULL, '', '2022-07-20'),
+(67, 41, 'Áo akatsuki 4', '200000.0000', 'Unisex', NULL, '', '2022-07-20'),
+(66, 41, 'Áo akatsuki 3', '300000.0000', 'Unisex', NULL, '', '2022-07-20'),
+(65, 41, 'Áo akatsuki 2', '200000.0000', 'Unisex', NULL, '', '2022-07-20'),
+(64, 41, 'Áo akatsuki 1', '100000.0000', 'Unisex', NULL, '', '2022-07-20'),
+(63, 46, 'Ốp điện thoại m3', '10000.0000', 'Unisex', NULL, '', '2022-07-20'),
+(62, 46, 'Ốp điện thoại m2', '10000.0000', 'Unisex', NULL, 'No description !!!', '2022-07-20'),
+(61, 46, 'Ốp điện thoại m1', '10000.0000', 'Unisex', NULL, '', '2022-07-20'),
+(60, 41, 'Áo Wibu', '120000.0000', 'Male', NULL, 'Wibu never die', '2022-07-20'),
+(73, 47, 'Idol coslay', '100000.0000', 'Male', NULL, 'No description!!!', '2022-07-21'),
 (74, 47, 'Bạn gái idol', '1000000.0000', 'Male', NULL, 'Nếu là một fan của bộ truyện Naruto, chắc hẳn cái tên tổ chức Akatsuki đã không còn quá xa lạ với tất cả mọi người. Là một nhóm quy tụ toàn những thành viên có các năng lực đặc biệt, có mục đích là truy lùng, bắt giữ các vĩ thú để thực hiện cho một âm mưu đen tối, Akatsuki dường như không mang lại cái nhìn quá tốt đẹp dành cho đông đảo các fan của manga. Và khi bộ truyện Naruto khép lại, tên của tổ chức này cũng dần chìm vào quên lãng. Nhưng mới đây thôi, một cô nàng hot girl đã bất ngờ khiến cho từ khóa \'Akatsuki\' trở nên hot hơn bao giờ hết, nhờ vào bộ cosplay siêu gợi cảm của mình.\n', '2022-07-21');
 
 -- --------------------------------------------------------
@@ -273,8 +279,9 @@ INSERT INTO `size` (`id`, `product_id`, `size`, `color`, `link_img`, `count`) VA
 (51, 73, 'over size', '#ff0000', 'http://res.cloudinary.com/vitamim/image/upload/v1658387108/vitamim/rjzerotcocrghycf72bn.jpg', 2),
 (52, 73, 'big size', '#f3d5af', 'http://res.cloudinary.com/vitamim/image/upload/v1658387108/vitamim/az5f3vwracx2hxwlfqxj.jpg', 3),
 (53, 74, 'fit', '#ffffff', 'http://res.cloudinary.com/vitamim/image/upload/v1658395499/vitamim/n5dfvy6downnaiy7khjq.webp', 4),
-(54, 74, 'cover', '#8b7f68', 'http://res.cloudinary.com/vitamim/image/upload/v1658395498/vitamim/vhmf9aykd9h7w7tudtre.jpg', 5),
-(55, 74, 'big', '#c29b88', 'http://res.cloudinary.com/vitamim/image/upload/v1658395498/vitamim/f13hlfraqcpzdoaoxzoh.jpg', 6);
+(55, 74, 'big', '#c29b88', 'http://res.cloudinary.com/vitamim/image/upload/v1658395498/vitamim/f13hlfraqcpzdoaoxzoh.jpg', 6),
+(57, 74, 'size', '#db0000', 'http://res.cloudinary.com/vitamim/image/upload/v1659597935/vitamim/twweykukuxxj6hseqv5m.jpg', 9),
+(58, 74, 'neow', '#00ff40', 'http://res.cloudinary.com/vitamim/image/upload/v1659597936/vitamim/xlco3p6n80lsmjgzbn8a.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -284,7 +291,7 @@ INSERT INTO `size` (`id`, `product_id`, `size`, `color`, `link_img`, `count`) VA
 
 CREATE TABLE `transaction` (
   `id` bigint(20) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `status` text COLLATE utf8_bin NOT NULL DEFAULT '0',
   `user_id` int(11) NOT NULL DEFAULT 0,
   `user_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `user_email` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -297,6 +304,17 @@ CREATE TABLE `transaction` (
   `security` varchar(16) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Đang đổ dữ liệu cho bảng `transaction`
+--
+
+INSERT INTO `transaction` (`id`, `status`, `user_id`, `user_name`, `user_email`, `user_phone`, `user_address`, `amount`, `payment`, `payment_info`, `message`, `security`, `created`) VALUES
+(27, 'đã giao', 30, 'Nguyễn Hải Linh', 'linh.nguyen1505@gmail.com', '0395114189', 'thôn 2 xã Liên Lộc-Hậu Lộc-Thanh Hóa', '140000.0000', 'Thanh toán khi nhận hàng', '', '', '', '2022-08-03'),
+(28, 'đang giao', 30, 'Nguyễn Hải Linh', 'linh.nguyen1505@gmail.com', '0395114189', 'thôn 2 xã Liên Lộc-Hậu Lộc-Thanh Hóa', '140000.0000', 'momo', '', '', '', '2022-08-03'),
+(26, 'đã hủy', 30, 'Nguyễn Hải Linh', 'linh.nguyen1505@gmail.com', '0395114189', 'thôn 2 xã Liên Lộc-Hậu Lộc-Thanh Hóa', '230000.0000', 'Thanh toán khi nhận hàng', '', '', '', '2022-08-03'),
+(24, 'đã giao', 30, 'Nguyễn Hải Linh', 'linh.nguyen1505@gmail.com', '0395114189', 'thôn 2 xã Liên Lộc-Hậu Lộc-Thanh Hóa', '130000.0000', 'Thanh toán khi nhận hàng', '', '', '', '2022-08-03'),
+(30, 'chờ xác nhận', 38, 'Halee', 'a', '0395114189', 'thôn 2 xã Liên Lộc-Thủ Đức-Thanh Hóa', '50000.0000', 'momo', '', '', '', '2022-08-03');
 
 -- --------------------------------------------------------
 
@@ -321,8 +339,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `avatar`, `name`, `email`, `phone`, `address`, `password`, `created`) VALUES
 (35, 'https://cdn-icons-png.flaticon.com/512/983/983929.png?w=360', NULL, 'asbxaac', NULL, NULL, '123123123', '2022-07-20'),
-(38, 'http://res.cloudinary.com/vitamim/image/upload/v1658395216/vitamim/tjoryv0esiqprjq4vuki.webp', 'Linh Nguyễn Hải', 'a', '0395114189', 'thôn 2 xã Liên Lộc-Thủ Đức-Thanh Hóa', '1', '2022-07-20'),
-(30, 'http://res.cloudinary.com/vitamim/image/upload/v1658801499/vitamim/neda7kj9s2s4svjfuz0u.webp', 'Linh Version 2', 'linh.nguyen1505@gmail.com', NULL, '--', '1212', '2022-07-19');
+(38, 'http://res.cloudinary.com/vitamim/image/upload/v1658395216/vitamim/tjoryv0esiqprjq4vuki.webp', 'Halee', 'a', '0395114189', 'thôn 2 xã Liên Lộc-Thủ Đức-Thanh Hóa', '1', '2022-07-20'),
+(30, 'http://res.cloudinary.com/vitamim/image/upload/v1658801499/vitamim/neda7kj9s2s4svjfuz0u.webp', 'Nguyễn Hải Linh', 'linh.nguyen1505@gmail.com', '0395114189', 'thôn 2 xã Liên Lộc-Hậu Lộc-Thanh Hóa', '1212', '2022-07-19');
 
 -- --------------------------------------------------------
 
@@ -341,8 +359,10 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`user_id`, `id`, `product_id`) VALUES
-(38, 59, 69),
-(38, 61, 74);
+(30, 66, 71),
+(30, 67, 69),
+(38, 61, 74),
+(30, 64, 70);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -440,7 +460,7 @@ ALTER TABLE `messenger`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
@@ -452,13 +472,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT cho bảng `size`
 --
 ALTER TABLE `size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT cho bảng `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
@@ -470,7 +490,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
