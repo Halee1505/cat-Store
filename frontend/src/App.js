@@ -15,6 +15,7 @@ import OrderDetail from "./adminpage/orderdetail";
 
 // adminpage
 import AdminPage from "./adminpage/adminpage";
+import PageNotFound from "./page/pagenotfound";
 // import AddClothesPage from './adminpage/addclothespage';
 // import GetClothesPage from './adminpage/getclothespage';
 
@@ -65,6 +66,7 @@ function App() {
               </AdminOptionState>
             }
           />
+          <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </UserState>
     </BrowserRouter>
